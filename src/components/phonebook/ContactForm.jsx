@@ -1,4 +1,5 @@
 import style from '../phonebook/phonebook.module.css'
+import PropTypes from 'prop-types';
 
 
 const ContactForm = ({onSubmit}) => {
@@ -37,7 +38,10 @@ const ContactForm = ({onSubmit}) => {
 }
 
 
-
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func
+  
+  }
 
 
 

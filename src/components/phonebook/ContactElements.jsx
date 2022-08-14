@@ -1,4 +1,5 @@
 import style from '../phonebook/phonebook.module.css'
+import PropTypes from 'prop-types';
 
 
 const ContactElement = ({contact, onDelete}) =>  {
@@ -11,6 +12,11 @@ const ContactElement = ({contact, onDelete}) =>  {
             </li>)
     
        }
+
+       ContactElement.propTypes = {
+        contact: PropTypes.object,
+        onDelete: PropTypes.func
+    }
 
 
     export default ContactElement

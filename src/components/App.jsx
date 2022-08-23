@@ -5,6 +5,8 @@ import ContactForm from "../components/phonebook/ContactForm";
 import { nanoid } from "nanoid";
 import style from './phonebook/phonebook.module.css'
 import Notiflix from "notiflix";
+import PropTypes from 'prop-types';
+
 
 class App extends Component {
 
@@ -110,5 +112,11 @@ render(){
 
 }
 };
+
+App.propTypes = {
+  contacts: PropTypes.array,
+  filter: PropTypes.string
+  
+  }
 
 export default App

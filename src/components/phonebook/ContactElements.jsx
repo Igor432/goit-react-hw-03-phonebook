@@ -14,9 +14,12 @@ const ContactElement = ({contact, onDelete}) =>  {
        }
 
        ContactElement.propTypes = {
-        contact: PropTypes.object,
-        onDelete: PropTypes.func
-    }
+        contact: PropTypes.shape({
+          name: PropTypes.string.isRequired,
+          number: PropTypes.string.isRequired,
+        }).isRequired,
+        onDelete: PropTypes.func.isRequired,
+      };
 
 
     export default ContactElement
